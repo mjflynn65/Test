@@ -80,6 +80,56 @@
     return out + "[MISTAKE] " + s.mistake + "\n\n[ADAPTED] " + s.adapt + "\n\n[pause]\n" + s.nail;
   }
 
+  // ---- Recruiting section (founding group) ----
+  var R = P.recruiting;
+  function recScript(v) {
+    return beat("hook", "Hook · 0–4s", v.hook, "Shot A. Slow. Look right at the lens. Quieter than a Hard Truth video.") +
+      beat("", "Truth · 4–20s", v.truth, "") +
+      beat("turn", "Turn · 20–35s", v.turn, "Lean in slightly. Even quieter.") +
+      beat("nail", "Nail · 35–45s", v.nail, "Two seconds of silence first.") +
+      beat("ask", "Invite · 45–55s", v.invite, "Warm and plain. No sales voice.") +
+      '<div class="actions"><button class="btn" data-copy="rec">Copy for teleprompter</button></div>';
+  }
+  function recCaption(v) {
+    return '<p class="say">' + esc(v.caption) + '</p><p style="color:var(--gold);font-family:var(--label);letter-spacing:.06em">' + esc(v.tags) + "</p>" +
+      '<p style="font-size:.9rem;color:var(--dust)">The first line repeats the hook. No greeting. 3–5 hashtags. On Instagram, add “👇 Save this if it hit home.”</p>' +
+      '<div class="actions"><button class="btn" data-copy="cap">Copy caption</button></div>';
+  }
+  function recShots(v) {
+    var h = '<table class="shots"><thead><tr><th>#</th><th>Setup</th><th>Shot</th><th>Notes</th></tr></thead><tbody>';
+    v.shots.forEach(function (r, i) {
+      h += "<tr><td>" + (i + 1) + '</td><td class="c">' + r[0] + " · " + setupName[r[0]] + "</td><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td></tr>";
+    });
+    return h + '</tbody></table><p style="margin-top:12px;font-size:.9rem;color:var(--dust)">Light in front of you, overcast if possible. Horse out of focus behind you. Never a blank wall. Length: 45–55 seconds.</p>' +
+      '<div class="actions"><button class="btn alt" data-print="1">Print this video</button></div>';
+  }
+  function recReplies() {
+    var r = R.replies;
+    return '<div class="gsec"><h4>1 · Reply to the comment publicly</h4><p class="say">' + esc(r.publicReply) + "</p>" +
+      '<h4>2 · First message: ask before you invite</h4><p class="say">' + esc(r.firstDM) + "</p>" +
+      '<h4>3 · The invite: open with what they told you</h4><p class="say">' + esc(r.invite) + "</p>" +
+      '<h4>4 · Once 15 are in</h4><p class="say">' + esc(r.full) + "</p>" +
+      '<div class="stop"><strong>Never</strong> send the invite before they’ve answered the first message. Asking first gets you a reply, and their answer tells you whether they fit.</div></div>';
+  }
+  if (R) {
+    var ra = document.createElement("a");
+    ra.href = "#recruiting"; ra.textContent = "Recruit"; ra.style.color = "var(--rust)";
+    nav.appendChild(ra);
+    var rs = document.createElement("section");
+    rs.className = "month"; rs.id = "recruiting";
+    rs.innerHTML = '<div class="month-head"><div><div class="lab">Before Month 1 · Founding group</div><h2>Recruiting <em>Comment ' + esc(R.keyword) + '</em></h2>' +
+      '<div class="month-meta">' + esc(R.goal) + '</div><div class="box"><div class="lab">How it works</div><ol>' + li(R.how) + "</ol></div></div></div>";
+    R.videos.forEach(function (v, i) {
+      var d = document.createElement("details");
+      d.className = "week"; d.id = "rec-" + (i + 1); d.dataset.r = i;
+      d.innerHTML = '<summary><div class="wnum">' + v.id + '</div><div><div class="wtitle">' + esc(v.title) + '</div><div class="waim">' + esc(v.aim) + '</div></div><div class="wbadges"><span class="badge b-core">Recruiting</span></div></summary>' +
+        '<div class="tabs" role="tablist"><button class="on" data-tab="0">Script</button><button data-tab="1">Caption</button><button data-tab="2">Shot Sheet</button><button data-tab="3">Reply Plan</button></div>' +
+        '<div class="pane on">' + recScript(v) + '</div><div class="pane">' + recCaption(v) + '</div><div class="pane">' + recShots(v) + '</div><div class="pane">' + recReplies() + "</div>";
+      rs.appendChild(d);
+    });
+    root.appendChild(rs);
+  }
+
   var index = {};
   P.months.forEach(function (mo) {
     var a = document.createElement("a");
@@ -121,7 +171,10 @@
       card.querySelectorAll(".pane").forEach(function (p, i) { p.classList.toggle("on", String(i) === t.dataset.tab); });
     }
     if (t.dataset.copy) {
-      var txt = teleprompter(index[card.dataset.w], t.dataset.copy);
+      var txt, rv = card.dataset.r != null ? R.videos[card.dataset.r] : null;
+      if (t.dataset.copy === "rec") txt = rv.id + " · " + rv.title.toUpperCase() + "\n\n" + [rv.hook, rv.truth, rv.turn, "[pause]", rv.nail, rv.invite].join("\n\n");
+      else if (t.dataset.copy === "cap") txt = rv.caption + "\n\n" + rv.tags;
+      else txt = teleprompter(index[card.dataset.w], t.dataset.copy);
       (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function () {
         var toast = document.getElementById("toast"); toast.classList.add("show"); setTimeout(function () { toast.classList.remove("show"); }, 1800);
       }).catch(function () { window.prompt("Copy this:", txt); });

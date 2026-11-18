@@ -8,6 +8,8 @@ Each of the 52 weeks has four tabs:
 - **Instruction:** a narrated demo script with a camera setup for every beat, the common mistake, the adapted demo, and the nail line.
 - **Shot Sheet:** a numbered shot list using the four standard setups: A Authority Stand, W Work Shot, C Close Read, D Detail.
 
+**Recruiting (before Month 1):** three short videos (R1 Fear, R2 After the Accident, R3 Your Body) that ask viewers to comment GROUND. Each has a script, a caption with hashtags, a shot sheet, and a reply plan for the comments. Use them to fill the 15-person founding group. Content lives in `production/data/recruiting.js`.
+
 **Tiers:** Entry = weeks 1–4 (Month 1). Core = all 52. Mentorship = Core, plus the weekly Film & Send and a monthly live call (topic shown under each month).
 
 **Buttons:** "Copy for teleprompter" puts a clean script on your clipboard. "Print this week" prints one week with all four parts.
