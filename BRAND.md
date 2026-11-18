@@ -1,51 +1,65 @@
 # Mike Flynn Horsemanship: Brand Guide
 
+This guide is built from Mike's content persona playbook, his shot sheet, and his "Hope & Hard Truth" scripts.
+It keeps the website and the social channels (@mj.flynn8) one brand.
+
 ## Positioning
-**Who it's for:** Horse owners, mostly women aged 45–70, who love their horse but feel
-frightened to ride, are recovering confidence after an accident, or can't physically do
-standard training exercises. Many feel let down or embarrassed by traditional clinicians.
+- **Persona:** *The Standard Bearer.* A working horseman who holds the line on what real horsemanship looks like.
+- **Category to own:** Foundation horsemanship. Use the word "foundation" in every context.
+- **Core truth:** *"If it does not hold up over time, for horse and human, it is not horsemanship."*
+- **Program audience:** Horse owners, mostly women aged 45–70, who've been scared, hurt in an accident, or limited
+  physically, and who've been let down by clinicians. They love their horse and want to feel close to it.
+- **How the persona meets them:** *Hold the standard and hold the door open at the same time.*
+  "The horse still deserves the truth. So does the person on the other end of the lead rope."
+- **Against:** The quick-fix industry, and dependency (the trainer who never teaches you to read your own horse).
 
-**Promise:** Feel safe with your horse again, then feel closer than ever.
+## Program
+52 weeks, 12 monthly series. Month 1 is the **Foundation Series**: Read Before You Ask · Space Is the First Language ·
+Pressure & Release · The First Yield. Riding is optional, and the first ride appears in month 10.
 
-**Tagline:** *Confidence from the ground up.*
-
-**Program:** A 52-week online program in 12 monthly series. Month 1 is the **Foundation Series**.
+## Funnel (from the playbook)
+Free short-form content → **The Foundation List** (this site's waitlist) → entry product → flagship program → clinics and mentorship.
 
 ## Voice
-| Do | Don't |
+| Do | Never |
 |---|---|
-| Calm, warm, patient, plain-spoken | "Push through it", "show them who's boss" |
-| Validate fear as information | Shame, hype, or bravado |
-| Always offer an adapted or ground-only option | Assume fitness, youth, or riding ambition |
-| Short sentences, clear safety steps | Jargon without explanation |
+| Speak in certainty. Short sentences, hard stops. | Wellness or therapy language |
+| Use the horse's behaviour as evidence | "In my opinion" or "some people think" |
+| Name the real problem before the solution | Inspirational or motivational tone, listicles |
+| Validate the person (fear, body, age) without lowering the standard | Shame, speaking down, apologising for a hard truth |
+| Finish on a line they'll repeat to a friend | Ending without a point that lands |
 
-Key phrases: *at your pace · riding is always optional · small steps · kind boundaries · connection over correction*
+**Lines to reuse:**
+- "The horse doesn't lie. He shows you exactly what you've been putting in."
+- "Being afraid doesn't make you wrong."
+- "Your body doesn't disqualify you."
+- "A relationship built entirely on the ground is still a complete, real relationship."
+- "One thing, done right. Put the horse away."
+- "Don't make that decision from the hardest day. Stay in it."
 
-## Logo
-- **Mark:** an upturned horseshoe (luck, protection) cradling a saddle-leather heart (connection).
-  Files: `assets/logo-mark.svg` (light backgrounds), `assets/logo-mark-light.svg` (dark backgrounds).
-- **Wordmark:** "Mike Flynn" in Fraunces Bold over "HORSEMANSHIP" in Source Sans 3 Bold, tracked +0.32em, saddle brown.
-- Keep clear space equal to the heart's width around the mark. Don't recolor, stretch or rotate it.
-
-## Color
+## Colour
 | Token | Hex | Use |
 |---|---|---|
-| Evergreen Ink | `#1F2A24` | Body text, footer |
-| Forest | `#2F4A3A` | Primary brand color, logo, feature sections |
-| Deep Forest | `#22372B` | Headings, waitlist background |
-| Sage | `#8FA68E` | Supporting accents, landscape |
-| Sage Mist | `#E3E9DD` | Soft section backgrounds |
-| Cream | `#F7F2E9` | Main background |
-| Sand | `#ECE2CF` | Warm panels |
-| Saddle | `#A8612F` | Buttons, calls to action, highlights |
-| Saddle Dark | `#8A4D23` | Hover states, links, small accent text |
-| Sunrise | `#E8C79A` | Accents on dark backgrounds |
+| Ink | `#0F0D0A` | Primary background |
+| Leather | `#2A1F14` | Header, footer, feature sections |
+| Rust | `#B84C1E` | Buttons, accents, labels |
+| Gold | `#C9962A` | Logo, highlights, italic emphasis |
+| Dust | `#8A7355` | Secondary labels |
+| Bone | `#E8E0D0` | Body text on dark backgrounds |
+| Parchment | `#F2EAD8` | Light reading sections and forms, for contrast for an older audience |
 
-## Typography
-- **Display:** Fraunces (600 headings, 400 italic for emotional accents)
-- **Body:** Source Sans 3, at least 19px on web. The audience values readability, so never go small.
+## Type
+- **Display:** Playfair Display, 900 for headlines and italic 700 for emphasis and quotes
+- **Labels:** Barlow Condensed, 700, uppercase, wide tracking (0.2–0.35em)
+- **Body:** Barlow, at least 19px on the web
 
-## Photography direction
-Real, unglamorous moments: a woman's hand on a horse's neck, soft morning light, groundwork in
-a paddock, horses with relaxed ears and lowered heads. Avoid rearing horses, high-speed riding,
-or competition imagery.
+## Logo
+A gold horseshoe, open end up, with a rust diamond at its centre. File: `assets/logo-mark.svg`.
+Wordmark: "Mike **Flynn**" (Flynn in gold) over "FOUNDATION HORSEMANSHIP" in rust Barlow Condensed.
+
+## Photography (from the shot sheet)
+- **Light:** in front of the subject. Overcast is ideal.
+- **Background:** a real one, such as a barn, fence or pasture.
+- **Framing:** tight on Mike for talking pieces. A side angle at hip height for groundwork.
+- **Close-ups:** eye, ear, lick and chew.
+- **Never:** a blank wall, sun behind the subject, or handheld footage during horse work.

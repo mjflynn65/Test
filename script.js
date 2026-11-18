@@ -31,8 +31,8 @@
     form.innerHTML =
       '<div class="form-success">' +
       '<img src="assets/logo-mark.svg" alt="" width="64" height="64" style="margin:0 auto 14px">' +
-      "<h3>You're on the list" + (safe ? ", " + safe : "") + ".</h3>" +
-      "<p>Thank you. Watch your inbox for your free <strong>Calm Before You Start</strong> safety guide and early access to the Foundation Series.</p>" +
+      "<h3>You're on the Foundation List" + (safe ? ", " + safe : "") + ".</h3>" +
+      "<p>Good. You showed up. Watch your inbox for early access to the Foundation Series and your first note from Mike.</p>" +
       "</div>";
   }
 

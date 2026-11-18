@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mike Flynn Horsemanship mark">
-  <title>Mike Flynn Horsemanship</title>
-  <path d="M15 8v15a17 17 0 0 0 34 0V8" fill="none" stroke="#f7f2e9" stroke-width="9" stroke-linecap="round"/>
-  <g fill="#1f2a24">
-    <circle cx="15" cy="13" r="1.6"/><circle cx="15" cy="22" r="1.6"/><circle cx="18" cy="31" r="1.6"/>
-    <circle cx="49" cy="13" r="1.6"/><circle cx="49" cy="22" r="1.6"/><circle cx="46" cy="31" r="1.6"/>
-  </g>
-  <path d="M32 33c-7-5-9-10.5-5.6-13.3 2.4-2 5.6-.8 5.6 1.6 0-2.4 3.2-3.6 5.6-1.6C41 22.5 39 28 32 33z" fill="#a8612f"/>
-</svg>
