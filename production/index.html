@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MJ Flynn · 52-Week Production Binder</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f0d0a;--card:#16120c;--leather:#2a1f14;--rust:#b84c1e;--gold:#c9962a;--dust:#8a7355;--bone:#e8e0d0;--white:#fafaf7;--parch:#f2ead8;--line:rgba(138,115,85,.22);
+--label:"Barlow Condensed","Arial Narrow",sans-serif;--disp:"Playfair Display",Georgia,serif;--body:"Barlow",system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--bone);font:400 17px/1.65 var(--body)}
+h1,h2,h3,h4{font-family:var(--disp);color:var(--white);margin:0 0 .4em;line-height:1.15}
+a{color:var(--gold)}
+.lab{font-family:var(--label);font-weight:700;letter-spacing:.25em;text-transform:uppercase;font-size:.78rem;color:var(--rust)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{background:var(--leather);border-bottom:1px solid rgba(201,150,42,.25);padding:44px 0 34px}
+header.top h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:900}
+header.top h1 span{color:var(--gold)}
+header.top p{color:var(--bone);max-width:760px}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.badge{font-family:var(--label);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;padding:3px 10px;border:1px solid}
+.b-entry{color:#e3b55a;border-color:rgba(201,150,42,.5)}
+.b-core{color:#e07a4a;border-color:rgba(184,76,30,.6)}
+.b-mentor{color:#9cc3a4;border-color:rgba(106,171,126,.5)}
+nav.months{position:sticky;top:0;z-index:20;background:#0b0907;border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav.months::-webkit-scrollbar{display:none}
+nav.months .wrap{display:flex;gap:2px;align-items:center}
+nav.months a{font-family:var(--label);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;color:var(--dust);text-decoration:none;padding:13px 11px;border-bottom:2px solid transparent}
+nav.months a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+nav.months select{margin-left:auto;background:var(--card);color:var(--bone);border:1px solid var(--line);font:600 .85rem var(--label);letter-spacing:.1em;padding:6px 8px}
+section.ref{padding:34px 0 10px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid4{grid-template-columns:1fr}}
+.setup{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--rust);padding:16px}
+.setup h4{font-family:var(--label);text-transform:uppercase;letter-spacing:.12em;font-size:1rem;color:var(--gold)}
+.setup .code{font-family:var(--disp);font-weight:900;font-size:1.6rem;color:rgba(255,255,255,.12);float:right;line-height:1}
+.setup dl{margin:0;font-size:.88rem}.setup dt{font-family:var(--label);color:var(--rust);letter-spacing:.15em;text-transform:uppercase;font-size:.7rem;margin-top:6px}.setup dd{margin:0}
+.box{background:var(--card);border:1px solid var(--line);padding:18px 20px;margin-top:14px}
+.box ul{margin:6px 0 0;padding-left:20px}
+.month{padding:44px 0 10px;border-top:1px solid var(--line);margin-top:30px}
+.month-head{display:grid;grid-template-columns:1fr auto;gap:10px 24px;align-items:end;margin-bottom:18px}
+.month-head h2{font-size:clamp(1.7rem,3.5vw,2.4rem)}
+.month-head h2 em{color:var(--gold)}
+.month-meta{font-size:.95rem;color:var(--bone)}
+.mentor-call{border-left:3px solid #6aab7e;padding:8px 14px;background:rgba(106,171,126,.07);margin-top:10px;font-size:.93rem}
+details.week{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);margin:12px 0}
+details.week>summary{list-style:none;cursor:pointer;padding:16px 20px;display:grid;grid-template-columns:62px 1fr auto;gap:14px;align-items:center}
+details.week>summary::-webkit-details-marker{display:none}
+.wnum{font-family:var(--disp);font-weight:900;font-size:1.9rem;color:rgba(255,255,255,.14);line-height:1}
+.wtitle{font-family:var(--disp);font-weight:700;font-size:1.25rem;color:var(--white);line-height:1.2}
+.waim{font-size:.92rem;color:var(--dust)}
+.wbadges{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:640px){details.week>summary{grid-template-columns:44px 1fr}.wbadges{grid-column:2;justify-content:flex-start}}
+.tabs{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tabs button{flex:1;background:none;border:0;border-bottom:2px solid transparent;color:var(--dust);font:700 .8rem var(--label);letter-spacing:.18em;text-transform:uppercase;padding:12px 10px;cursor:pointer;white-space:nowrap}
+.tabs button.on{color:var(--gold);border-bottom-color:var(--gold)}
+.pane{display:none;padding:20px 22px 22px}.pane.on{display:block}
+.beat{display:grid;grid-template-columns:120px 1fr;border-bottom:1px solid rgba(138,115,85,.1)}
+.beat:last-child{border-bottom:0}
+.beat .k{font:700 .72rem var(--label);letter-spacing:.18em;text-transform:uppercase;padding:12px 10px 12px 0;color:var(--dust)}
+.beat .k.hook{color:var(--rust)}.beat .k.nail{color:#8fb3c4}.beat .k.turn{color:var(--gold)}.beat .k.ask{color:#9cc3a4}
+.beat .v{padding:11px 0}
+.beat .v .dir{display:block;color:var(--dust);font-size:.85rem;font-style:italic}
+.beat .v strong{color:var(--white)}
+@media(max-width:600px){.beat{grid-template-columns:1fr}.beat .k{padding-bottom:0}}
+.say{color:var(--white)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+.gsec h4{font-family:var(--label);text-transform:uppercase;letter-spacing:.18em;font-size:.85rem;color:var(--gold);margin-top:14px}
+.gsec ol,.gsec ul{margin:4px 0 0;padding-left:22px}
+.gsec li{margin:3px 0}
+.adapt{border-left:3px solid var(--gold);padding:8px 14px;background:rgba(201,150,42,.06);margin-top:12px}
+.stop{border-left:3px solid var(--rust);padding:8px 14px;background:rgba(184,76,30,.08);margin-top:12px}
+.film{border-left:3px solid #6aab7e;padding:10px 14px;background:rgba(106,171,126,.08);margin-top:14px}
+table.shots{width:100%;border-collapse:collapse;font-size:.93rem}
+table.shots th{font:700 .72rem var(--label);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-align:left;padding:8px;border-bottom:1px solid var(--line)}
+table.shots td{padding:9px 8px;border-bottom:1px solid rgba(138,115,85,.1);vertical-align:top}
+table.shots td.c{font:800 .95rem var(--label);color:var(--rust);white-space:nowrap}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.btn{background:var(--rust);color:var(--white);border:0;padding:9px 16px;font:700 .78rem var(--label);letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
+.btn.alt{background:transparent;border:1px solid var(--dust);color:var(--bone)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--rust);color:#fff;font:700 .8rem var(--label);letter-spacing:.2em;text-transform:uppercase;padding:10px 22px;opacity:0;transition:.3s;pointer-events:none}
+.toast.show{opacity:1}
+footer{padding:50px 0;text-align:center;color:var(--dust);font-family:var(--label);letter-spacing:.15em;text-transform:uppercase;font-size:.85rem}
+@media print{
+  body{background:#fff;color:#111;font-size:11pt}
+  nav.months,.actions,header.top .legend,.tabs,.toast,footer{display:none!important}
+  h1,h2,h3,h4,.wtitle,.say,.beat .v strong{color:#111!important}
+  .card,details.week,.setup,.box{background:#fff!important;border-color:#bbb!important}
+  .pane{display:block!important;page-break-inside:auto}
+  .pane+.pane{border-top:1px solid #ccc}
+  body.print-one .month, body.print-one section.ref, body.print-one header.top{display:none}
+  body.print-one .month.has-target{display:block;border:0;margin:0;padding:0}
+  body.print-one .month.has-target .month-head{display:none}
+  body.print-one details.week{display:none}
+  body.print-one details.week.target{display:block}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="lab">Mike Flynn Horsemanship · @mj.flynn8 · Internal · not for public</div>
+    <h1>52 Weeks. <span>Production Binder.</span></h1>
+    <p>Every week has four parts. A <strong>motivation</strong> talking-head script (Shot A, 60–90 sec). A <strong>lesson guide</strong> members read. An <strong>instruction</strong> script you narrate while you work (Shots W/C/D, 3–6 min). And a <strong>shot sheet</strong>. Film the motivation and the instruction on the same day, with the same horse and the same light.</p>
+    <div class="legend">
+      <span class="badge b-entry">Entry · Weeks 1–4</span>
+      <span class="badge b-core">Core · All 52 weeks</span>
+      <span class="badge b-mentor">Mentorship · + Film &amp; Send, monthly live call</span>
+    </div>
+  </div>
+</header>
+
+<nav class="months" aria-label="Months"><div class="wrap" id="monthnav"></div></nav>
+
+<section class="ref">
+  <div class="wrap">
+    <div class="lab">Standard setups · from your shot sheet</div>
+    <h2>Four camera setups. Every shot in this binder uses one.</h2>
+    <div class="grid4">
+      <div class="setup"><span class="code">A</span><h4>Authority Stand</h4><dl><dt>Use</dt><dd>Every motivation script. Week intros.</dd><dt>Height</dt><dd>Chest to chin. Eye level or just below.</dd><dt>Frame</dt><dd>Tight. Chest to just above head.</dd><dt>Background</dt><dd>Barn, fence, horse out of focus. Never a blank wall.</dd><dt>Body</dt><dd>Still on the hook. Move after the point lands.</dd></dl></div>
+      <div class="setup"><span class="code">W</span><h4>Work Shot</h4><dl><dt>Use</dt><dd>All demonstrations.</dd><dt>Height</dt><dd>Tripod or fence rail, knee to hip.</dd><dt>Angle</dt><dd>Side view. You and the whole horse in frame. Show the space between you.</dd><dt>Run</dt><dd>Let it roll. Don't stop and start.</dd></dl></div>
+      <div class="setup"><span class="code">C</span><h4>Close Read</h4><dl><dt>Use</dt><dd>The tells: eye, ear, lick &amp; chew, head drop, feet.</dd><dt>Distance</dt><dd>Close. Fill the frame.</dd><dt>Mount</dt><dd>Fence post or tripod. Never handheld.</dd><dt>Narration</dt><dd>Optional. Silence works.</dd></dl></div>
+      <div class="setup"><span class="code">D</span><h4>Detail</h4><dl><dt>Use</dt><dd>Hands, rope, knots, tack, where your feet go.</dd><dt>Frame</dt><dd>Hands and rope fill the frame. Slow it down.</dd><dt>Mount</dt><dd>Tripod over your shoulder, or a second person.</dd><dt>Note</dt><dd>Members copy what they see here. Do it slowly and do it right.</dd></dl></div>
+    </div>
+    <div class="cols">
+      <div class="box"><div class="lab">Every session · safety check (in every lesson guide)</div>
+        <ul>
+          <li>Boots with a heel and closed toe. Gloves for rope work.</li>
+          <li>A rope halter and a 12–14 ft lead. Never wrap the rope around your hand or body.</li>
+          <li>Work in a fenced, level area with good footing and no loose dogs or children.</li>
+          <li>Stand at his shoulder, never directly in front or behind. Know your way out.</li>
+          <li>Someone knows you're out there. Phone on you.</li>
+          <li>Rate yourself 1–10 before you start. Above a 6, do the ground-only version or stop.</li>
+        </ul></div>
+      <div class="box"><div class="lab">Filming day · rules from your shot sheet</div>
+        <ul>
+          <li>Light in front of you. Overcast is ideal. No sun behind you.</li>
+          <li>Phone on a tripod for any horse work. Wireless mic on for every take.</li>
+          <li>Film the motivation (A) first, while you're fresh. Then the instruction (W/C/D).</li>
+          <li>Leave 2 seconds of silence before the nail line. Silence before the nail is power.</li>
+          <li>Film every lesson's ground-only/adapted version too. Members need to see it done.</li>
+          <li>Real background. Barn, fence, pasture.</li>
+        </ul></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap" id="binder"></main>
+<footer>"If it does not hold up over time, for horse and human, it is not horsemanship."</footer>
+<div class="toast" id="toast">Copied</div>
+
+<script>window.PROGRAM = { months: [] };</script>
+<script src="data/m01-02.js"></script>
+<script src="data/m03-04.js"></script>
+<script src="data/m05-06.js"></script>
+<script src="data/m07-08.js"></script>
+<script src="data/m09-10.js"></script>
+<script src="data/m11-12.js"></script>
+<script src="binder.js"></script>
+</body>
+</html>

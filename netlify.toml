@@ -1,0 +1,6 @@
+# Keep the internal production binder off the public site.
+[[redirects]]
+  from = "/production/*"
+  to = "/404.html"
+  status = 404
+  force = true
