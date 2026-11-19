@@ -249,10 +249,10 @@ window.PROGRAM.months.push(
   {
     w: 14, title: "Approach & Retreat", aim: "Walk away before he does. Teach him your approach means nothing bad.",
     mot: {
-      hook: "Your horse won't come to you. That's not a horse problem.",
-      truth: "That's a relationship problem. And it was built one rushed catch at a time. Every time the halter went on and work started, he filed it. Horses don't forget. They file it.",
+      hook: "If your horse walks away when you come to catch him, he's not being bad. He's telling you something.",
+      truth: "Somewhere along the way he learned that the halter means work starts. Maybe with you, maybe long before you. Horses don't forget. They file it. The good news is they file the new things too.",
       turn: "Let me show you what I mean. The fix isn't a bucket of grain. It's walking away from him before he walks away from you.",
-      nail: "A horse that runs from you is telling you something. The question is whether you're willing to hear it.",
+      nail: "A horse that walks away is telling you something. You're here because you're ready to listen.",
       ask: "This week, you'll walk out to him without a halter. Get close, then leave. Every day. Nothing else."
     },
     guide: {
@@ -283,7 +283,7 @@ window.PROGRAM.months.push(
         ["C", "Right there. You see that? He licked his lips. He's starting to think about this."],
         ["W", "And now he follows me two steps. That's him starting to choose."]
       ],
-      mistake: "Getting greedy. You get close and grab for him. He's learned you're lying. Leave first, every time this week.",
+      mistake: "Getting greedy. You get close and reach for him, and he learns your approach was a trick after all. Leave first, every time this week.",
       adapt: "Show yourself sitting on a bucket 20 feet in, and him wandering over.",
       nail: "I didn't force him toward me. I made standing near me the easiest option. That's foundation."
     },
@@ -345,7 +345,7 @@ window.PROGRAM.months.push(
   {
     w: 16, title: "Haltering Without a Fight", aim: "Head down, halter on, and he stands. Every time.",
     mot: {
-      hook: "If haltering your horse is a wrestle, everything after it starts wrong.",
+      hook: "If haltering feels like a wrestle, it's not you. It's a step nobody has taught him yet.",
       truth: "The halter is where the work starts. If it goes on with a head toss, a step away, or you on your tiptoes reaching for his nose, he's started the day braced. So have you.",
       turn: "Here's the fix. You don't halter a horse. You teach him to put his head in the halter.",
       nail: "The halter goes on last. If he's ready for it, it goes on easy.",

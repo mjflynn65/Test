@@ -17,6 +17,15 @@ It keeps the website and the social channels (@mj.flynn8) one brand.
 52 weeks, 12 monthly series. Month 1 is the **Foundation Series**: Read Before You Ask · Space Is the First Language ·
 Pressure & Release · The First Yield. Riding is optional, and the first ride appears in month 10.
 
+## Two audiences, two voices (the rule)
+Everything a **member or prospect** sees (the landing page, the course, the binder, emails, invites, recruiting videos) speaks only to the program audience: owners aged 45–70 who've been scared, hurt, or limited by their body, plus riders who feel something's missing.
+
+- **Hard truths aim at the industry, never at the owner.** "The clinics assumed a body you don't have" is right. "You built this problem" is wrong.
+- **Never imply she caused it.** She has already been made to feel at fault by clinicians.
+- **Safety facts are framed as something she can control,** not as a warning meant to scare her.
+- **Say "horse person," "you," or "the person holding the rope,"** not "horseman," when talking about her. Mike can still call himself a horseman.
+- The original "Hard Truth" scripts (the 20 Scripts file) were written for a **general horse audience**. Use them only on social media, to reach people, and never in member material.
+
 ## Funnel (from the playbook)
 Free short-form content → **The Foundation List** (this site's waitlist) → entry product → flagship program → clinics and mentorship.
 
@@ -30,7 +39,7 @@ Free short-form content → **The Foundation List** (this site's waitlist) → e
 | Finish on a line they'll repeat to a friend | Ending without a point that lands |
 
 **Lines to reuse:**
-- "The horse doesn't lie. He shows you exactly what you've been putting in."
+- "Your horse doesn't need you to be perfect. He needs you to be the same person every time you walk through the gate."
 - "Being afraid doesn't make you wrong."
 - "Your body doesn't disqualify you."
 - "A relationship built entirely on the ground is still a complete, real relationship."

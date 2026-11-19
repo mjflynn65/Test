@@ -202,9 +202,9 @@ window.PROGRAM.months.push(
     w: 48, title: "His Report Card", aim: "Re-test every exercise from Months 1–9. See how far he's come.",
     mot: {
       hook: "Twenty years in horses taught me one thing above everything else.",
-      truth: "The horse is never wrong. He's responding to exactly what he's been given. His breeding. His handling. And you, right now. Always.",
+      truth: "Your horse is always telling you the truth about where he is. Not to judge you. To show you.",
       turn: "Read that again. Because that means everything he does better this year, you gave him.",
-      nail: "The horse is always giving you accurate information. The question is whether you're willing to use it.",
+      nail: "Your horse is always giving you honest information. Every bit of it helps you.",
       ask: "This week, run his report card: every exercise from the year, one at a time. Grade each one: solid, OK, or needs work."
     },
     guide: {
@@ -236,7 +236,7 @@ window.PROGRAM.months.push(
       ],
       mistake: "Grading him on his best day or his worst. Grade the usual.",
       adapt: "Show the report card with touch cues only.",
-      nail: "The horse is always giving you accurate information. The question is whether you're willing to use it."
+      nail: "Your horse is always giving you honest information. Every bit of it helps you."
     },
     shots: [
       ["W", "Each exercise, short clip, same framing", "For the montage."],

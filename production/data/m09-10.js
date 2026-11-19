@@ -143,7 +143,7 @@ window.PROGRAM.months.push(
   {
     w: 38, title: "Grazing Manners", aim: "He eats when you say, and his head comes up when you ask.",
     mot: {
-      hook: "If your horse drags you to the grass, he's not hungry. He's in charge.",
+      hook: "If your horse drags you to the grass, you're not weak. He just hasn't learned that grass is your idea.",
       truth: "Grass is the biggest temptation in his world. A horse that dives for it whenever he likes is pulling your arms, ignoring your rules, and putting his head down at the exact moment you might need his attention.",
       turn: "But grazing together can be one of the best moments you have. You just need it to be your idea.",
       nail: "Grass is the reward, not the right.",
@@ -333,10 +333,10 @@ window.PROGRAM.months.push(
   {
     w: 42, title: "The Mounting Block", aim: "He lines himself up beside the block and stands. You stay on the ground.",
     mot: {
-      hook: "Most riding accidents happen before you're even on.",
+      hook: "The safest part of riding starts before you ever get on.",
       truth: "The horse that walks off as you mount. Swings his hind end away. Won't stand. You're halfway up, off-balance, with one foot in a stirrup. That's the most dangerous few seconds in riding, and almost nobody practises it.",
       turn: "This week you don't get on. You teach him to line up at the block and stand. Like a gentleman.",
-      nail: "If he won't stand at the block, you're not ready to get on. Neither is he.",
+      nail: "When he stands quietly at the block, you'll both know you're ready. Not before.",
       ask: "This week: he lines up beside the block and stands for 30 seconds while you stand on it. Both sides."
     },
     guide: {
@@ -365,9 +365,9 @@ window.PROGRAM.months.push(
         ["C", "Lined up. Standing. I rub his back."],
         ["D", "Lean over. Rub the far side. Step down."]
       ],
-      mistake: "Getting on a horse that won't stand at the block. You're asking to be dumped on the ground half-mounted.",
+      mistake: "Getting on a horse that won't stand at the block. If he moves while you're halfway up, you're off balance with nowhere to go. Wait until standing is easy.",
       adapt: "Show the ground path: grooming from the block, no plan to get on.",
-      nail: "If he won't stand at the block, you're not ready. Neither is he."
+      nail: "When he stands quietly at the block, you'll both know you're ready. Not before."
     },
     shots: [
       ["W", "Lining up beside the block, real time", "Side view, wide."],

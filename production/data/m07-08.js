@@ -51,7 +51,7 @@ window.PROGRAM.months.push(
   {
     w: 28, title: "Going Back Is Going Forward", aim: "Find where the conversation was still working and rebuild from there.",
     mot: {
-      hook: "Going back to the beginning isn't failure. It's the most advanced thing a horseman can do.",
+      hook: "Going back to the beginning isn't failure. It's the most advanced thing you can do with a horse.",
       truth: "Most people keep pushing forward on a cracked foundation because going back feels like admitting they got it wrong. But the crack doesn't disappear because you ignored it. It gets buried deeper, and it shows up later, usually at the worst possible moment.",
       turn: "Going back means you can read the situation honestly. It means you care more about the horse than about your pride.",
       nail: "Give yourself permission to go back. He isn't judging you for it. He's relieved you finally listened.",

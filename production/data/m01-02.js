@@ -10,7 +10,7 @@ window.PROGRAM.months.push(
       hook: "Before you do anything with your horse this week, I want you to do nothing.",
       truth: "Most people walk in and start asking. Halter, lead, work. They never stop to find out who showed up today. Your horse is different every single day. His sleep, his herd, what he saw in the field. All of that walks into the pen with him.",
       turn: "And here's the part nobody tells you. That read is also how you keep yourself safe. Every horse that ever hurt someone told them first. Usually more than once.",
-      nail: "The best horsemen look like they're doing nothing. That's not nothing. That's everything.",
+      nail: "The best horse people look like they're doing nothing. That's not nothing. That's everything.",
       ask: "This week, you're going to stand at the gate for one full minute before you touch him. Every day. Write down what you see. That's the whole assignment."
     },
     guide: {
@@ -216,8 +216,8 @@ window.PROGRAM.months.push(
   {
     w: 5, title: "Fair, Consistent, Clear", aim: "Respect and fear look the same from the outside. Build the right one.",
     mot: {
-      hook: "Respect and fear look identical. Your horse knows exactly which one you built.",
-      truth: "A fearful horse complies. But he's calculating. Looking for an exit. Eventually the fear gets bigger than your pressure, and then he's leaving, or he's coming through you. That's how people get hurt by horses that looked obedient.",
+      hook: "Respect and fear can look the same from the outside. Your horse feels the difference.",
+      truth: "A horse that moves out of fear does what he's told, but he's worried and looking for a way out. That kind of quiet doesn't last, and it isn't what you want with your horse anyway.",
       turn: "Respect looks completely different. It's built from three things. Fair. Consistent. Clear. Ask. He responds. Release. No grudge. No ego. No surprises.",
       nail: "You can't force a horse to respect you. You earn it, one honest interaction at a time.",
       ask: "This week you're going to write down your rules. Three of them. Then you're going to keep them every single day, the same way, whether you're tired or not."
@@ -314,7 +314,7 @@ window.PROGRAM.months.push(
   {
     w: 7, title: "Leading With Space", aim: "He walks with you, stops when you stop, and never drags or crowds.",
     mot: {
-      hook: "Every walk to the field is either building your horse or un-building him.",
+      hook: "The walk to the field is the lesson you practise most. Let's make it a good one.",
       truth: "Most people think of leading as getting from A to B. But it's the exercise you do more than any other. Every day. If he drags you, crowds you, or stops and plants his feet, that's what he's practising. Every day.",
       turn: "Here's the good news. That means you get dozens of chances a week to fix it, without adding a single minute to your schedule.",
       nail: "There's no such thing as just leading him. Every step is a lesson. Make it the right one.",

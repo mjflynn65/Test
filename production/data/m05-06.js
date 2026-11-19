@@ -55,10 +55,10 @@ window.PROGRAM.months.push(
   {
     w: 19, title: "His Threshold", aim: "Know when he's thinking and when he's past thinking.",
     mot: {
-      hook: "Your horse isn't spooky. He's unconfident. And one of those you can fix.",
-      truth: "Spooky lets everybody off the hook. Unconfident is a diagnosis. It means somewhere along the way, he stopped trusting that the person holding the rope would handle what came at them both.",
+      hook: "Your horse isn't spooky. He's unconfident. And confidence is something you can build together.",
+      truth: "Spooky sounds like a personality. Unconfident is something you can work on. It means he isn't sure yet that the world, and the person holding the rope, will keep him safe.",
       turn: "And here's what matters for you. There's a line. On one side of it, he's worried but thinking. On the other side, he's past thinking. Your job is to see the line before he crosses it.",
-      nail: "A confident horse comes from a confident horseman. Build yourself first.",
+      nail: "Confidence grows in both of you at the same time. One calm step at a time.",
       ask: "This week you're going to learn his line. Walk him toward something mildly worrying. Stop where he's still thinking. And wait there."
     },
     guide: {
@@ -258,7 +258,7 @@ window.PROGRAM.months.push(
       hook: "Your horse can feel a fly land on him. He can feel your lead rope.",
       truth: "Most horses have been taught to ignore the rope, because most people use it too much. Pull, pull, pull. So he tunes it out until it's a fight. Then people say he's dull. He's not dull. He's numb.",
       turn: "This week you're going to give him the chance to feel it again. The lightest touch, a wait, and a release.",
-      nail: "If you want a light horse, be a light horseman first.",
+      nail: "If you want a light horse, start with a light hand.",
       ask: "This week: lead him with the rope held between two fingers. If he can follow that, you've got a feel."
     },
     guide: {
@@ -288,7 +288,7 @@ window.PROGRAM.months.push(
       ],
       mistake: "Getting louder with the rope when he doesn't respond. Use your body instead. Walk off with energy. The rope stays light.",
       adapt: "Show stepping him toward you on a feel while you stand still.",
-      nail: "If you want a light horse, be a light horseman first."
+      nail: "If you want a light horse, start with a light hand."
     },
     shots: [
       ["D", "Two-finger grip on the lead", "Very close. Members will copy this."],
@@ -347,7 +347,7 @@ window.PROGRAM.months.push(
   {
     w: 25, title: "Feet Up Without a Fight", aim: "He picks up each foot and holds it calmly. Safer for you and the farrier.",
     mot: {
-      hook: "If picking up your horse's feet is a fight, you have a foundation problem, not a foot problem.",
+      hook: "If picking up his feet turns into a tug-of-war, it's not a foot problem. It's a trust step that's missing.",
       truth: "Giving you his feet means giving you his only way to escape. A horse who snatches his foot away isn't being rude. He's not sure it's safe yet. And you don't fix that with strength. You fix it with the same pressure and release you've been practising for six months.",
       turn: "And this is a big one for your body. A horse that lifts his foot on a light ask means you're not bending over wrestling a leg.",
       nail: "He gives you his feet when he trusts you with his escape.",
