@@ -114,6 +114,9 @@ strong { color: var(--white); font-weight: 600; }
 .cards { display: grid; gap: 22px; }
 .cards.three { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) { .cards.three { grid-template-columns: 1fr; } }
+.cards.four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1100px) { .cards.four { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .cards.four { grid-template-columns: 1fr; } }
 .card { background: var(--white); border: 1px solid var(--line-light); border-top: 3px solid var(--rust); padding: 30px 28px; }
 .card-tag { font-family: var(--font-label); font-weight: 700; font-size: .8rem; letter-spacing: .3em; text-transform: uppercase; color: var(--rust); margin-bottom: .6em; }
 .card h3 { font-style: italic; font-size: 1.35rem; }
@@ -202,3 +205,9 @@ details p { color: var(--text-muted-dark); }
 .site-footer p { margin: 0; font-family: var(--font-label); letter-spacing: .14em; text-transform: uppercase; color: var(--dust); font-size: .95rem; }
 .site-footer .footer-quote { font-family: var(--font-display); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 1.2rem; color: var(--bone); margin: 12px 0 4px; }
 .site-footer .small { font-family: var(--font-body); text-transform: none; letter-spacing: 0; font-size: .9rem; max-width: 640px; margin-top: 8px; }
+
+/* Silent Sundays band */
+.silent-band { background: var(--ink); text-align: center; border-top: 1px solid var(--line-dark); }
+.silent-band .eyebrow { color: #8fb3c4; }
+.silent-band p { font-size: 1.15rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+.silent-band .silent-line { font-family: var(--font-display); font-style: italic; font-size: clamp(1.3rem, 2.6vw, 1.7rem); color: var(--white); margin-top: 28px; }
