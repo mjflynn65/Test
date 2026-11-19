@@ -4,7 +4,7 @@ window.PROGRAM.start = {
     {
       id: "S1", title: "Welcome", aim: "Who you are, how it works, and why she's in the right place. 60–90 sec.",
       beats: [
-        ["hook", "Hook · 0–4s", "It's never too late to reset the foundation — for you and your horse. That's what we do here.", "Shot A. Slow. Look right at the lens."],
+        ["hook", "Hook · 0–4s", "It's never too late to reset the foundation for your horse… and for you. That's what we do here.", "Shot A. Slow. Look right at the lens."],
         ["", "Who · 4–25s", "I'm Mike Flynn. Twenty years in horses. Backyard horses. Problem horses. And I've met so many owners who love their horse — and feel like they're guessing. Or scared. Or left behind by clinics built for somebody else's body.", ""],
         ["", "How · 25–45s", "Here's how this works. One series a month. One lesson a week. One thing to practise — done right. Then you put him away on a win. Twenty minutes of honest work beats two hours of drilling.", ""],
         ["turn", "Interrupt · 45–49s", "[Pause.] And you never have to ride.", "Let that one land. Hold the look."],

@@ -7,7 +7,7 @@ It keeps the website and the social channels (@mj.flynn8) one brand.
 - **Persona:** *The Standard Bearer.* A working horseman who holds the line on what real horsemanship looks like.
 - **Category to own:** Foundation horsemanship. Use the word "foundation" in every context.
 - **Core truth:** *"If it does not hold up over time, for horse and human, it is not horsemanship."*
-- **Headline:** *It's never too late to reset the foundation for you and your horse.*
+- **Headline:** *It's never too late to reset the foundation for your horse… and for you.*
 - **Program audience:** Horse owners, mostly women aged 45–70, who've been scared, hurt in an accident, or limited
   physically, and who've been let down by clinicians. They love their horse and want to feel close to it.
 - **How the persona meets them:** *Hold the standard and hold the door open at the same time.*
