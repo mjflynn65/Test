@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundation Series · Practice Sheets</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kit.css">
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+<div id="sheets"></div>
+<script>window.PROGRAM = { months: [] };</script>
+<script src="../data/m01-02.js"></script>
+<script>
+(function () {
+  var esc = function (s) { return String(s).replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); };
+  var li = function (a) { return (a || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join(""); };
+  var head = function (w, part) {
+    return '<div class="head"><div class="brand">Mike <span>Flynn</span></div><div class="meta"><div class="lab">Foundation Series · Week ' + w + "</div>" + part + "</div></div>";
+  };
+  var foot = function (w, n) { return '<div class="foot"><span>Mike Flynn · Foundation Horsemanship · @mj.flynn8</span><span>Week ' + w + " · page " + n + " of 2</span></div>"; };
+  var m1 = window.PROGRAM.months.filter(function (m) { return m.m === 1; })[0];
+  var out = "";
+  m1.weeks.forEach(function (wk) {
+    var g = wk.guide;
+    out += '<section class="page">' + head(wk.w, "The lesson") +
+      "<h1>" + esc(wk.title) + '</h1><p class="aim">' + esc(wk.aim) + "</p>" +
+      '<div class="one"><strong>Your one thing this week</strong>' + esc(wk.mot.ask) + "</div>" +
+      "<h2>Step by step</h2><ol>" + li(g.steps) + "</ol>" +
+      '<div class="box adapt"><strong>Ground-only &amp; adapted version.</strong> ' + esc(g.adapt) + "</div>" +
+      '<div class="cols"><div class="box"><strong>It\'s working when</strong><ul>' + li(g.signs) + '</ul></div><div class="box stop"><strong>Stop and go back a step if</strong><ul>' + li(g.stop) + "</ul></div></div>" +
+      '<div class="box"><strong>Safety this week.</strong> Do your safety checklist first. ' + esc((g.safety || []).join(" ")) + "</div>" +
+      foot(wk.w, 1) + "</section>";
+    var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var rows = days.map(function (d) { return '<tr><td class="day">' + d + "</td><td></td><td></td><td></td><td></td></tr>"; }).join("");
+    rows += '<tr class="sun"><td class="day">Silent Sunday</td><td></td><td></td><td></td><td></td></tr>';
+    out += '<section class="page">' + head(wk.w, "Your practice log") +
+      "<h1>Week " + wk.w + ": your log</h1>" +
+      '<p class="aim">' + esc(g.plan) + "</p>" +
+      '<p style="font-size:14px">Rate yourself before and after each session: <strong>1</strong> = relaxed, <strong>10</strong> = frozen. Above a 6, do the ground-only version or stop. Stopping is a skill.</p>' +
+      '<table class="log"><thead><tr><th>Day</th><th>Number before</th><th>What we did</th><th>Number after</th><th>One thing I noticed</th></tr></thead><tbody>' + rows + "</tbody></table>" +
+      (wk.w >= 2 ? '<div class="box" style="border-left:4px solid #6f94a6"><strong>Silent Sunday.</strong> Same exercise, nothing verbal at all. Before and after, write your number and one word for what you\'re feeling. Then send Mike your video.</div>'
+                 : '<div class="box" style="border-left:4px solid #6f94a6"><strong>Sunday.</strong> Do your gate read with nothing verbal at all, then send Mike your video. Silent Sundays start properly next week.</div>') +
+      '<h2>This week, in my own words</h2><div class="line"></div><div class="line"></div><div class="line"></div>' +
+      foot(wk.w, 2) + "</section>";
+  });
+  document.getElementById("sheets").innerHTML = out;
+  [].forEach.call(document.querySelectorAll(".page"), function (pg) { if (pg.scrollHeight > 1056) pg.classList.add("tight"); });
+})();
+</script>
+</body>
+</html>

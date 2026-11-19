@@ -1,0 +1,46 @@
+/* Founding member kit: print-first, light, large type for older readers */
+:root { --ink:#1b1712; --leather:#2a1f14; --rust:#b84c1e; --gold:#a8791c; --muted:#5e4d3a; --line:#d8cbb0; --parch:#f7f1e3; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #e9e2d2; color: var(--ink); font: 400 15px/1.55 "Barlow", "Segoe UI", system-ui, sans-serif; }
+h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; margin: 0 0 .35em; line-height: 1.15; }
+.lab { font: 700 11px "Barlow Condensed", "Arial Narrow", sans-serif; letter-spacing: .28em; text-transform: uppercase; color: var(--rust); }
+.page { width: 8.5in; min-height: 11in; margin: 24px auto; background: #fff; padding: .5in .6in .7in; box-shadow: 0 4px 20px rgba(0,0,0,.12); position: relative; }
+.head { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--rust); padding-bottom: 10px; margin-bottom: 18px; }
+.head .brand { font: 900 20px "Playfair Display", Georgia, serif; }
+.head .brand span { color: var(--gold); }
+.head .meta { text-align: right; }
+.page h1 { font-size: 30px; }
+.page h2 { font-size: 19px; margin-top: 14px; color: var(--leather); }
+.aim { font-size: 16px; color: var(--muted); margin: 0 0 6px; }
+.one { background: var(--parch); border-left: 4px solid var(--rust); padding: 12px 16px; font-size: 16px; margin: 14px 0; }
+.one strong { display: block; font: 700 11px "Barlow Condensed", sans-serif; letter-spacing: .25em; text-transform: uppercase; color: var(--rust); margin-bottom: 4px; }
+ol, ul { margin: 4px 0 0; padding-left: 22px; }
+li { margin: 3px 0; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.box { border: 1.5px solid var(--line); padding: 9px 14px; margin-top: 10px; }
+.box.adapt { border-left: 4px solid var(--gold); }
+.box.stop { border-left: 4px solid var(--rust); }
+table.log { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13.5px; }
+table.log th { font: 700 10.5px "Barlow Condensed", sans-serif; letter-spacing: .18em; text-transform: uppercase; color: var(--leather); text-align: left; border-bottom: 2px solid var(--leather); padding: 6px; }
+table.log td { border-bottom: 1px solid var(--line); padding: 0 6px; height: 46px; vertical-align: middle; }
+table.log tr.sun td { background: #eef3f5; }
+table.log td.day { font-weight: 600; width: 16%; }
+.line { border-bottom: 1px solid var(--line); height: 30px; }
+.foot { position: absolute; bottom: .4in; left: .65in; right: .65in; display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 6px; }
+.scale { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; margin: 8px 0; }
+.scale div { border: 1.5px solid var(--line); text-align: center; padding: 6px 0; font-weight: 700; }
+.check li { list-style: none; margin: 7px 0; padding-left: 34px; position: relative; font-size: 17px; }
+.check li::before { content: ""; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border: 2px solid var(--leather); }
+.check { padding-left: 0; }
+.page.tight { font-size: 14px; line-height: 1.45; }
+.page.tight li { margin: 2px 0; }
+.page.tight .one { font-size: 15px; padding: 10px 14px; margin: 10px 0; }
+.toolbar { text-align: center; padding: 16px; }
+.toolbar button { background: var(--rust); color: #fff; border: 0; padding: 10px 22px; font: 700 13px "Barlow Condensed", sans-serif; letter-spacing: .2em; text-transform: uppercase; cursor: pointer; }
+@media print {
+  @page { size: letter; margin: 0; }
+  body { background: #fff; }
+  .page { margin: 0; box-shadow: none; page-break-after: always; break-after: page; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .toolbar { display: none; }
+}

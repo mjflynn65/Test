@@ -23,3 +23,14 @@ Each of the 52 weeks has four tabs:
 **Editing:** content lives in `production/data/m01-02.js` through `m11-12.js`, one object per week.
 
 `netlify.toml` blocks `/production/` on the public site. If you host somewhere else, don't upload this folder.
+
+## Founding member kit (`production/kit/`)
+Open `production/kit/index.html`. It has:
+- **10 messages in send order,** each with a copy button: welcome, the day before, the four weekly openers, the Silent Sunday reminder, feedback, the testimonial request, and what's next.
+- **14 feedback-form questions** to paste into a Google Form.
+- **Printables,** with ready PDFs in `production/kit/pdf/`:
+  - `01-Safety-Checklist.pdf` (1 page, for the tack room)
+  - `02-Practice-Sheets-Weeks-1-4.pdf` (8 pages: the lesson plus a 7-day log for each week)
+  - `03-My-Journal.pdf` (3 pages: starting point, Silent Sundays, four weeks later)
+
+The practice sheets are built from the binder data, so if a lesson changes, re-print them from `practice-sheets.html`.

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Founding Member Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kit.css">
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 28px 18px 60px; }
+  .hero { background: var(--leather); color: #f2ead8; padding: 34px 28px; }
+  .hero h1 { color: #fff; font-size: 34px; }
+  .hero h1 span { color: #c9962a; }
+  .hero p { margin: 6px 0 0; }
+  .card { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--rust); padding: 18px 22px; margin: 14px 0; }
+  .card h3 { font-size: 20px; }
+  .when { font: 700 11px "Barlow Condensed", sans-serif; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+  .msg { white-space: pre-line; background: var(--parch); padding: 14px 16px; margin: 10px 0; font-size: 15.5px; }
+  .copy { background: var(--rust); color: #fff; border: 0; padding: 8px 16px; font: 700 12px "Barlow Condensed", sans-serif; letter-spacing: .18em; text-transform: uppercase; cursor: pointer; }
+  .printables a { display: block; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--gold); padding: 14px 18px; margin: 10px 0; color: var(--ink); text-decoration: none; }
+  .printables a strong { font-family: "Playfair Display", Georgia, serif; font-size: 18px; }
+  .printables a span { display: block; color: var(--muted); font-size: 14px; }
+  h2.sec { font-size: 26px; margin-top: 36px; }
+  ol.q li { margin: 8px 0; }
+  .note { font-size: 14px; color: var(--muted); }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--rust); color: #fff; padding: 9px 20px; font: 700 12px "Barlow Condensed", sans-serif; letter-spacing: .2em; text-transform: uppercase; opacity: 0; transition: .3s; }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap" style="padding:0">
+    <div class="lab" style="color:#c9962a">Internal · Founding group of 15</div>
+    <h1>Founding Member <span>Kit</span></h1>
+    <p>Everything a founding member receives, in the order you send it. Fill in the [brackets] before sending. Messages are in your voice. Edit freely.</p>
+  </div>
+</div>
+<div class="wrap">
+
+  <h2 class="sec">Printables</h2>
+  <p class="note">Open each one and press “Print / Save as PDF.” Ready-made PDFs are also in the <code>pdf/</code> folder. Send all three PDFs with the welcome message.</p>
+  <div class="printables">
+    <a href="safety-checklist.html"><strong>Safety checklist</strong><span>One page for the tack room. The Safety Briefing video tells members to print it.</span></a>
+    <a href="practice-sheets.html"><strong>Practice sheets, Weeks 1–4</strong><span>Two pages per week: the lesson on one, a 7-day log with Silent Sunday on the other. Built from the binder, so they always match the videos.</span></a>
+    <a href="journal.html"><strong>My journal</strong><span>Starting point, Silent Sunday notes, and “four weeks later.” This is where the before-and-after comes from.</span></a>
+  </div>
+
+  <h2 class="sec">Messages, in order</h2>
+  <div id="msgs"></div>
+
+  <h2 class="sec">Feedback form</h2>
+  <p class="note">Put these questions into a free Google Form and send the link with the feedback message. Questions 1–2 and 13–14 give you your before-and-after numbers and your testimonials.</p>
+  <ol class="q">
+    <li>Before the four weeks, what was your number (1–10) around your horse?</li>
+    <li>What is it now?</li>
+    <li>What changed most for your horse?</li>
+    <li>What changed most for you?</li>
+    <li>Which week helped you most, and why?</li>
+    <li>Which week was hardest or least clear?</li>
+    <li>Were the lessons too short, about right, or too long?</li>
+    <li>Did you use the ground-only or adapted version? Was it enough?</li>
+    <li>Silent Sundays: what did you notice, in your horse and in yourself?</li>
+    <li>How useful was Mike's weekly video feedback? (1–5)</li>
+    <li>Was anything confusing, or did anything make you feel unsafe?</li>
+    <li>Would you carry on to Month 2? (Yes / Maybe / No) What would make it a yes?</li>
+    <li>What would you tell a friend about the Foundation Series?</li>
+    <li>May Mike share your answer to question 13, with your first name? (Yes / No)</li>
+  </ol>
+</div>
+<div class="toast" id="toast">Copied</div>
+
+<script>
+var MESSAGES = [
+  { when: "Right after they pay", title: "1 · Welcome",
+    text: "You're in. Good.\n\nHere's what happens before [start date]:\n\n1. Watch two short videos: Welcome and Safety. [link]\n2. Print the three sheets I've attached. Tape the safety checklist in your tack room.\n3. Film your gate. One minute. Stand at the gate and watch your horse. Don't do anything. Send it to me before we start. We'll film it again at the end, and you'll want to see the difference.\n\nHow the four weeks work:\n• A new lesson opens every [Monday].\n• Practise a few times that week. Twenty minutes is plenty.\n• Every Sunday, work in silence. Nothing verbal. Then send me a short video, and I'll send back feedback.\n\nOne question before we start: are you riding right now, or working on the ground? No wrong answer. It tells me what to look for in your videos.\n\nSee you at the gate.\nMike" },
+  { when: "The day before you start", title: "2 · Tomorrow",
+    text: "Tomorrow we start. Week 1 opens in the morning.\n\nHaven't sent your gate video yet? No problem. Film it tomorrow before you watch the lesson. Before you touch him. That's the whole point.\n\nMike" },
+  { when: "Week 1 opens", title: "3 · Week 1: Read Before You Ask",
+    text: "Week 1 is open: Read Before You Ask. [link]\n\nThis week you do nothing. On purpose. One minute at the gate before you touch him. Every day. Three words in your notebook.\n\nIt's the easiest week of the four — and the one people skip. Don't skip it.\n\nSunday: do your gate read with nothing verbal at all. Then send me your video.\n\nMike" },
+  { when: "Week 2 opens", title: "4 · Week 2: Space Is the First Language",
+    text: "Week 2 is open: Space Is the First Language. [link]\n\nBefore you touch him, he's already read you. This week you pick your bubble and ask him to respect it. Calmly. Every time.\n\nStart small. A raised hand first. The rope only if you need it. And let go the second he gives you a step.\n\nSunday is your first real Silent Sunday. Same exercise. Nothing verbal. Write your number before and after. Then send me the video.\n\nMike" },
+  { when: "Week 3 opens", title: "5 · Week 3: Pressure & Release",
+    text: "Week 3 is open: Pressure & Release. [link]\n\nOne principle under everything. Ask. He tries. You let go — immediately.\n\nThis week, count how fast you release. Under a second. Most people hold on too long. You won't.\n\nIf you're halfway through and feel behind — you're not. Slow is not failure. One thing, done right, is the whole job.\n\nSunday: silent. Number before and after. Video to me.\n\nMike" },
+  { when: "Week 4 opens", title: "6 · Week 4: The First Yield",
+    text: "Week 4 is open: The First Yield. [link]\n\nOne step of the hind end. Each side. Calm. That's it. When you get it, you've finished the Foundation Series.\n\nAt the end of the week, film your gate again. Same spot. Same way as before we started. Then watch both videos side by side.\n\nSend me both. I want to see it too.\n\nMike" },
+  { when: "Every Sunday morning", title: "7 · Silent Sunday reminder",
+    text: "It's Silent Sunday.\n\nSame exercise as this week. Nothing verbal at all. Number before. Number after. One word for what you're feeling.\n\nThen send me a minute or two of video. I'll get back to you by [day].\n\nMike" },
+  { when: "After Week 4", title: "8 · Feedback",
+    text: "Four weeks. You did it.\n\nBefore I build what comes next, I need your honest answers. Good and bad. It takes about five minutes: [form link]\n\nAnything that didn't work — tell me. That's how this gets better for the next person.\n\nMike" },
+  { when: "After their feedback, if it was positive", title: "9 · Testimonial request",
+    text: "Thank you for that. One more ask, and it's fine to say no.\n\nWould you write two or three sentences about what changed, for you and your horse? And may I share it with your first name, next to your before-and-after gate videos?\n\nSomething like: where you were before, what you did, and what's different now.\n\nMike" },
+  { when: "When the next step is ready", title: "10 · What's next",
+    text: "Here's what's next.\n\nMonth 2, Respect Without Fear, opens [date]. Founding members keep founding pricing: [price].\n\nWant a spot? Just reply yes.\n\nMike" }
+];
+var box = document.getElementById("msgs");
+MESSAGES.forEach(function (m, i) {
+  var d = document.createElement("div");
+  d.className = "card";
+  d.innerHTML = '<div class="when">' + m.when + "</div><h3>" + m.title + '</h3><div class="msg"></div><button class="copy" data-i="' + i + '">Copy message</button>';
+  d.querySelector(".msg").textContent = m.text;
+  box.appendChild(d);
+});
+box.addEventListener("click", function (e) {
+  var i = e.target.dataset.i; if (i == null) return;
+  var t = MESSAGES[i].text;
+  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+    var el = document.getElementById("toast"); el.classList.add("show"); setTimeout(function () { el.classList.remove("show"); }, 1600);
+  }).catch(function () { window.prompt("Copy this:", t); });
+});
+</script>
+</body>
+</html>
