@@ -17,6 +17,9 @@ It keeps the website and the social channels (@mj.flynn8) one brand.
 52 weeks, 12 monthly series. Month 1 is the **Foundation Series**: Read Before You Ask · Space Is the First Language ·
 Pressure & Release · The First Yield. Riding is optional, and the first ride appears in month 10.
 
+## Signature practice: Silent Sundays
+Every Sunday, Mike works his horse with nothing verbal at all: no words, no clucks, no kisses. When you're talking, your emotions come second. When you're quiet, you notice them and can control them, and the horse settles with you. It's built into the program from Week 2 on, and it's a weekly social series (hashtag: #SilentSundayHorsemanship, to be checked before first use). Use plain words like "what am I feeling," never therapy language.
+
 ## Two audiences, two voices (the rule)
 Everything a **member or prospect** sees (the landing page, the course, the binder, emails, invites, recruiting videos) speaks only to the program audience: owners aged 45–70 who've been scared, hurt, or limited by their body, plus riders who feel something's missing.
 

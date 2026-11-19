@@ -10,6 +10,8 @@ Each of the 52 weeks has four tabs:
 
 **Recruiting (before Month 1):** three short videos (R1 Fear, R2 After the Accident, R3 Your Body) that ask viewers to comment GROUND. Each has a script, a caption with hashtags, a shot sheet, and a reply plan for the comments. Use them to fill the 15-person founding group. Content lives in `production/data/recruiting.js`.
 
+**Silent Sundays:** Mike's signature practice: every Sunday, work the horse with nothing verbal at all. The section has the script, how members do it, and a guide for the weekly social post (filmed, no talking, on-screen text only). It's introduced in Week 2 and appears at the end of every lesson guide from Week 2 on. Content lives in `production/data/silent.js`.
+
 **Tiers:** Entry = weeks 1–4 (Month 1). Core = all 52. Mentorship = Core, plus the weekly Film & Send and a monthly live call (topic shown under each month).
 
 **Buttons:** "Copy for teleprompter" puts a clean script on your clipboard. "Print this week" prints one week with all four parts.

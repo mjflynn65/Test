@@ -38,6 +38,11 @@
     h += '<div class="cols"><div><h4>It\'s working when</h4><ul>' + li(g.signs) + "</ul></div>";
     h += '<div><div class="stop"><strong>Stop and go back a step if</strong><ul>' + li(g.stop) + "</ul></div></div></div>";
     h += "<h4>Your practice plan</h4><p>" + esc(g.plan) + "</p>";
+    if (P.silent && wk.w >= 2) {
+      h += '<div class="adapt" style="border-left-color:#8fb3c4;background:rgba(143,179,196,.07)"><strong>' + (wk.w === 2 ? "New this week: Silent Sundays begin. " : "Silent Sunday. ") + "</strong>" +
+        (wk.w === 2 ? esc(P.silent.idea) + " " : "") +
+        "This Sunday, repeat this week's exercise with nothing verbal at all. Before and after, write your number and one word for what you're feeling.</div>";
+    }
     h += '<div class="film"><span class="lab" style="color:#9cc3a4">Mentorship · Film &amp; send to Mike</span><br>' + esc(wk.film) + "</div></div>";
     return h;
   }
@@ -130,6 +135,39 @@
     root.appendChild(rs);
   }
 
+  // ---- Silent Sundays section ----
+  var S = P.silent;
+  if (S) {
+    var sa = document.createElement("a");
+    sa.href = "#silent"; sa.textContent = "Silent Sun"; sa.style.color = "#8fb3c4";
+    nav.appendChild(sa);
+    var ss = document.createElement("section");
+    ss.className = "month"; ss.id = "silent";
+    var sc = S.script;
+    var shots = '<table class="shots"><thead><tr><th>#</th><th>Setup</th><th>Shot</th><th>Notes</th></tr></thead><tbody>' +
+      S.social.map(function (r, i) { return "<tr><td>" + (i + 1) + '</td><td class="c">' + r[0] + " · " + setupName[r[0]] + "</td><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td></tr>"; }).join("") + "</tbody></table>";
+    ss.innerHTML = '<div class="month-head"><div><div class="lab">Signature practice · Every Sunday from Week 2</div><h2>' + esc(S.name) + " <em>Nothing verbal at all.</em></h2>" +
+      '<div class="month-meta">' + esc(S.idea) + "</div></div></div>";
+    var d = document.createElement("details");
+    d.className = "week"; d.id = "silent-card"; d.dataset.s = "1";
+    d.innerHTML = '<summary><div class="wnum">S</div><div><div class="wtitle">Silent Sunday</div><div class="waim">The script, how members do it, and your weekly social post.</div></div><div class="wbadges"><span class="badge b-core">Every week</span></div></summary>' +
+      '<div class="tabs" role="tablist"><button class="on" data-tab="0">Script</button><button data-tab="1">How Members Do It</button><button data-tab="2">Weekly Social Post</button></div>' +
+      '<div class="pane on">' +
+        beat("hook", "Hook · 0–3s", sc.hook, "Shot A. Flat and still.") +
+        beat("", "Truth · 3–20s", sc.truth, "") +
+        beat("turn", "Interrupt · 20–24s", sc.interrupt, "Really hold the silence. Don't rush it.") +
+        beat("", "Hope · 24–42s", sc.hope, "") +
+        beat("nail", "Nail · 42–50s", sc.nail, "Silence first.") +
+        beat("ask", "Member close", sc.member, "") +
+        beat("ask", "Social close", sc.social, "") +
+        '<div class="actions"><button class="btn" data-copy="silent">Copy for teleprompter</button></div></div>' +
+      '<div class="pane"><div class="gsec"><h4>Every Silent Sunday</h4><ol>' + li(S.howto) + '</ol><div class="stop"><strong>Safety.</strong> ' + esc(S.safety) + "</div></div></div>" +
+      '<div class="pane">' + shots + '<div class="gsec"><h4>Caption</h4><p class="say">' + esc(S.caption) + '</p><p style="color:var(--gold)">#foundationhorsemanship #horsemanship ' + esc(S.tag) + " #horseowner #groundwork</p>" +
+        '<p style="font-size:.9rem;color:var(--dust)">No script, no teleprompter. Film your real Sunday session. Search ' + esc(S.tag) + " before the first post to make sure nobody else is using it.</p></div></div>";
+    ss.appendChild(d);
+    root.appendChild(ss);
+  }
+
   var index = {};
   P.months.forEach(function (mo) {
     var a = document.createElement("a");
@@ -172,7 +210,8 @@
     }
     if (t.dataset.copy) {
       var txt, rv = card.dataset.r != null ? R.videos[card.dataset.r] : null;
-      if (t.dataset.copy === "rec") txt = rv.id + " · " + rv.title.toUpperCase() + "\n\n" + [rv.hook, rv.truth, rv.turn, "[pause]", rv.nail, rv.invite].join("\n\n");
+      if (t.dataset.copy === "silent") { var q = S.script; txt = "SILENT SUNDAY\n\n" + [q.hook, q.truth, q.interrupt, q.hope, "[pause]", q.nail, q.member].join("\n\n"); }
+      else if (t.dataset.copy === "rec") txt = rv.id + " · " + rv.title.toUpperCase() + "\n\n" + [rv.hook, rv.truth, rv.turn, "[pause]", rv.nail, rv.invite].join("\n\n");
       else if (t.dataset.copy === "cap") txt = rv.caption + "\n\n" + rv.tags;
       else txt = teleprompter(index[card.dataset.w], t.dataset.copy);
       (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function () {
