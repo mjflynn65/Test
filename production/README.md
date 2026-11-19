@@ -26,8 +26,9 @@ Each of the 52 weeks has four tabs:
 
 ## Founding member kit (`production/kit/`)
 Open `production/kit/index.html`. It has:
-- **10 messages in send order,** each with a copy button: welcome, the day before, the four weekly openers, the Silent Sunday reminder, feedback, the testimonial request, and what's next.
+- **11 messages in send order,** each with a copy button: agreement first, welcome, the day before, the four weekly openers, the Silent Sunday reminder, feedback, the testimonial request, and what's next.
 - **14 feedback-form questions** to paste into a Google Form.
+- **Participation agreement & release (DRAFT):** `waiver.html` / `00-Participation-Agreement-DRAFT.pdf`. A lawyer in Mike's state must review it before use. Members sign it before they get the payment link (message 0).
 - **Printables,** with ready PDFs in `production/kit/pdf/`:
   - `01-Safety-Checklist.pdf` (1 page, for the tack room)
   - `02-Practice-Sheets-Weeks-1-4.pdf` (8 pages: the lesson plus a 7-day log for each week)
