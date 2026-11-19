@@ -8,6 +8,10 @@ Each of the 52 weeks has four tabs:
 - **Instruction:** a narrated demo script with a camera setup for every beat, the common mistake, the adapted demo, and the nail line.
 - **Shot Sheet:** a numbered shot list using the four standard setups: A Authority Stand, W Work Shot, C Close Read, D Detail.
 
+**Start Here:** S1 Welcome and S2 Safety Briefing. Every member watches both before Week 1. Content lives in `production/data/start.js`.
+
+**Script style:** Month 1 (Weeks 1–4) is written in Mike's own format: Hook, Truth, Interrupt (with a stage direction), Hope, Nail, then a member close and a social close. The instruction scripts follow his Real Ranch structure: open raw, what's happening, work it, the lesson. Months 2–12 will be rewritten in the same format, one month at a time.
+
 **Recruiting (before Month 1):** three short videos (R1 Fear, R2 After the Accident, R3 Your Body) that ask viewers to comment GROUND. Each has a script, a caption with hashtags, a shot sheet, and a reply plan for the comments. Use them to fill the 15-person founding group. Content lives in `production/data/recruiting.js`.
 
 **Silent Sundays:** Mike's signature practice: every Sunday, work the horse with nothing verbal at all. The section has the script, how members do it, and a guide for the weekly social post (filmed, no talking, on-screen text only). It's introduced in Week 2 and appears at the end of every lesson guide from Week 2 on. Content lives in `production/data/silent.js`.

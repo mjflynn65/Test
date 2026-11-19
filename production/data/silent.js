@@ -17,7 +17,6 @@ window.PROGRAM.silent = {
     "After: write your number again, one word for what you're feeling, and one thing your horse did differently.",
     "Keep your Sunday notes together. Over the year, you'll watch your numbers come down."
   ],
-  safety: "Safety comes first. If something is going wrong and your voice would help, use it. Silent Sunday is a practice, not a rule that puts you at risk.",
   social: [
     ["W", "Your Sunday session, no talking", "Pivo on a tripod outside the pen. Let it roll for the whole session. Cut a 30–60 second clip later."],
     ["C", "The tells: head drop, lick and chew, soft eye", "Use them as the clip's moments. Silence makes them land."],

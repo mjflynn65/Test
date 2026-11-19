@@ -19,6 +19,16 @@
 
   function motivationPane(wk) {
     var m = wk.mot;
+    if (m.interrupt) {
+      return beat("hook", "Hook · 0–3s", m.hook, "Shot A. Start mid-statement. Under three seconds. Still.") +
+        beat("", "Truth · 3–18s", m.truth, "") +
+        beat("turn", "Interrupt · 18–22s", m.interrupt, "[" + m.interruptDir + "]") +
+        beat("", "Hope · 22–38s", m.hope, "") +
+        beat("nail", "Nail · 38–45s", m.nail, "Two seconds of silence first. Say it once. Hold your look after.") +
+        beat("ask", "Member close", m.ask, "For the lesson video.") +
+        beat("ask", "Social close", m.social, "For the social cut, swap the member close for this.") +
+        '<div class="actions"><button class="btn" data-copy="mot">Copy for teleprompter</button><button class="btn alt" data-copy="motsocial">Copy social version</button></div>';
+    }
     return beat("hook", "Hook · 0–5s", m.hook, "Shot A. Flat and direct. Don't move. Let it land.") +
       beat("", "Truth · 5–25s", m.truth, "") +
       beat("turn", "Turn · 25–45s", m.turn, "Lean in slightly, or shift your tone quieter. It resets attention.") +
@@ -49,7 +59,8 @@
 
   function instrPane(wk) {
     var s = wk.instr;
-    var h = beat("hook", "Open · A/W", s.open, "Start mid-scene if you can. No intro. No names.");
+    var h = beat("hook", s.happening ? "Open raw · 0–5s" : "Open · A/W", s.open, "Start mid-scene. No intro. No names.");
+    if (s.happening) h += beat("", "What's happening · 5–20s", s.happening, "Shot W. Name it plainly.");
     (s.beats || []).forEach(function (b, i) {
       h += beat("", "Step " + (i + 1) + " · " + b[0], b[1], setupName[b[0]] ? "Shot " + b[0] + " · " + setupName[b[0]] : "");
     });
@@ -76,13 +87,42 @@
   }
 
   function teleprompter(wk, kind) {
+    if ((kind === "mot" || kind === "motsocial") && wk.mot.interrupt) {
+      var n = wk.mot;
+      return "WEEK " + wk.w + " · " + wk.title.toUpperCase() + (kind === "motsocial" ? " · SOCIAL" : " · MOTIVATION") + "\n\n" +
+        [n.hook, n.truth, "[" + n.interruptDir + "]", n.interrupt, n.hope, "[pause]", n.nail, kind === "motsocial" ? n.social : n.ask].join("\n\n");
+    }
     if (kind === "mot") {
       var m = wk.mot;
       return "WEEK " + wk.w + " · " + wk.title.toUpperCase() + " · MOTIVATION\n\n" + [m.hook, m.truth, m.turn, "[pause]", m.nail, m.ask].join("\n\n");
     }
-    var s = wk.instr, out = "WEEK " + wk.w + " · " + wk.title.toUpperCase() + " · INSTRUCTION\n\n" + s.open + "\n\n";
+    var s = wk.instr, out = "WEEK " + wk.w + " · " + wk.title.toUpperCase() + " · INSTRUCTION\n\n" + s.open + "\n\n" + (s.happening ? s.happening + "\n\n" : "");
     (s.beats || []).forEach(function (b) { out += "[" + b[0] + "] " + b[1] + "\n\n"; });
     return out + "[MISTAKE] " + s.mistake + "\n\n[ADAPTED] " + s.adapt + "\n\n[pause]\n" + s.nail;
+  }
+
+  // ---- Start Here section (welcome + safety briefing) ----
+  var ST = P.start;
+  if (ST) {
+    var sta = document.createElement("a");
+    sta.href = "#start"; sta.textContent = "Start Here"; sta.style.color = "var(--gold)";
+    nav.appendChild(sta);
+    var sts = document.createElement("section");
+    sts.className = "month"; sts.id = "start";
+    sts.innerHTML = '<div class="month-head"><div><div class="lab">Before Week 1 · Every member</div><h2>Start Here <em>Welcome &amp; safety.</em></h2><div class="month-meta">' + esc(ST.goal) + "</div></div></div>";
+    ST.videos.forEach(function (v, i) {
+      var shots = '<table class="shots"><thead><tr><th>#</th><th>Setup</th><th>Shot</th><th>Notes</th></tr></thead><tbody>' +
+        v.shots.map(function (r, j) { return "<tr><td>" + (j + 1) + '</td><td class="c">' + r[0] + " · " + setupName[r[0]] + "</td><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td></tr>"; }).join("") +
+        '</tbody></table><div class="actions"><button class="btn alt" data-print="1">Print this video</button></div>';
+      var d = document.createElement("details");
+      d.className = "week"; d.id = "start-" + (i + 1); d.dataset.st = i;
+      d.innerHTML = '<summary><div class="wnum">' + v.id + '</div><div><div class="wtitle">' + esc(v.title) + '</div><div class="waim">' + esc(v.aim) + '</div></div><div class="wbadges"><span class="badge b-entry">Entry</span><span class="badge b-core">Core</span><span class="badge b-mentor">Mentorship</span></div></summary>' +
+        '<div class="tabs" role="tablist"><button class="on" data-tab="0">Script</button><button data-tab="1">Shot Sheet</button></div>' +
+        '<div class="pane on">' + v.beats.map(function (b) { return beat(b[0], b[1], b[2], b[3]); }).join("") +
+        '<div class="actions"><button class="btn" data-copy="start">Copy for teleprompter</button></div></div><div class="pane">' + shots + "</div>";
+      sts.appendChild(d);
+    });
+    root.appendChild(sts);
   }
 
   // ---- Recruiting section (founding group) ----
@@ -161,7 +201,7 @@
         beat("ask", "Member close", sc.member, "") +
         beat("ask", "Social close", sc.social, "") +
         '<div class="actions"><button class="btn" data-copy="silent">Copy for teleprompter</button></div></div>' +
-      '<div class="pane"><div class="gsec"><h4>Every Silent Sunday</h4><ol>' + li(S.howto) + '</ol><div class="stop"><strong>Safety.</strong> ' + esc(S.safety) + "</div></div></div>" +
+      '<div class="pane"><div class="gsec"><h4>Every Silent Sunday</h4><ol>' + li(S.howto) + '</ol></div></div>' +
       '<div class="pane">' + shots + '<div class="gsec"><h4>Caption</h4><p class="say">' + esc(S.caption) + '</p><p style="color:var(--gold)">#foundationhorsemanship #horsemanship ' + esc(S.tag) + " #horseowner #groundwork</p>" +
         '<p style="font-size:.9rem;color:var(--dust)">No script, no teleprompter. Film your real Sunday session. Search ' + esc(S.tag) + " before the first post to make sure nobody else is using it.</p></div></div>";
     ss.appendChild(d);
@@ -210,7 +250,8 @@
     }
     if (t.dataset.copy) {
       var txt, rv = card.dataset.r != null ? R.videos[card.dataset.r] : null;
-      if (t.dataset.copy === "silent") { var q = S.script; txt = "SILENT SUNDAY\n\n" + [q.hook, q.truth, q.interrupt, q.hope, "[pause]", q.nail, q.member].join("\n\n"); }
+      if (t.dataset.copy === "start") { var sv = ST.videos[card.dataset.st]; txt = sv.id + " · " + sv.title.toUpperCase() + "\n\n" + sv.beats.map(function (b) { return b[2]; }).join("\n\n"); }
+      else if (t.dataset.copy === "silent") { var q = S.script; txt = "SILENT SUNDAY\n\n" + [q.hook, q.truth, q.interrupt, q.hope, "[pause]", q.nail, q.member].join("\n\n"); }
       else if (t.dataset.copy === "rec") txt = rv.id + " · " + rv.title.toUpperCase() + "\n\n" + [rv.hook, rv.truth, rv.turn, "[pause]", rv.nail, rv.invite].join("\n\n");
       else if (t.dataset.copy === "cap") txt = rv.caption + "\n\n" + rv.tags;
       else txt = teleprompter(index[card.dataset.w], t.dataset.copy);
